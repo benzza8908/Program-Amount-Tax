@@ -1,0 +1,72 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class Assign04_6306021621197_01{
+    public static void main(String [] args)
+    {   double r1=0,r2=2.5,r3=4.0,r4=5.5,r5=7.5,r6=10.0;
+        double income;
+        DecimalFormat dec = new DecimalFormat("$#,##0.00");
+        Scanner s = new Scanner (System.in);
+        income=0;
+        
+        do{   
+            
+            
+                System.out.print("Enter your income(-1 to exit): ");
+                income = s.nextDouble();
+        
+            
+            
+            if(income==-1){
+                System.out.println("Exit Program....");
+            }
+            else
+            {
+                System.out.println("Net income: "+dec.format(income));
+
+                if(income >=0 && income<=150000)
+                {
+                    System.out.println("Tax Rate(%) :"+r1+"%");
+                    double amount=(income*r1)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+                else if(income >=150001 && income<=300000)
+                {
+                    System.out.println("Tax Rate(%) :"+r2+"%");
+                    double amount=(income*r2)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+                else if(income >=300001 && income<=500000)
+                {
+                    System.out.println("Tax Rate(%) :"+r3+"%");
+                    double amount=(income*r3)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+                else if(income >=500001 && income<=800000)
+                {
+                    System.out.println("Tax Rate(%) :"+r4+"%");
+                    double amount=(income*r4)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+                else if(income >=800001 && income<=1000000)
+                {
+                    System.out.println("Tax Rate(%) :"+r5+"%");
+                    double amount=(income*r5)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+                else if(income >=1000000 )
+                {
+                    System.out.println("Tax Rate(%) :"+r6+"%");
+                    double amount=(income*r6)/100;
+                    System.out.println("Amount Tax: "+dec.format(amount));
+                }
+
+            }
+                
+       
+    }while(income!=-1);
+
+        
+        
+
+    }
+}
